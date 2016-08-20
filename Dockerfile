@@ -5,7 +5,7 @@ MAINTAINER Raju Dawadi rajudawadinp@gmail.com
 ENV DEBIAN_FRONTEND noninteractive
 
 # Install Nodejs
-RUN apt-get update && apt-get install -y nodejs npm
+RUN apt-get update && apt-get install -y nodejs npm nodejs-legacy
 
 # Copy app to /src
 COPY . /src

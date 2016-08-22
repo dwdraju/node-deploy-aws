@@ -1,3 +1,7 @@
 language: node_js
 node_js:
   - "6.1"
+
+after_success:
+  - |
+      curl -H "Content-Type: application/json" --data '{"build": true}' -X POST https://registry.hub.docker.com/u/dwdraju/node-deploy-aws/trigger/091d099f-7589-4bcd-bf1f-6e8e808b3586/  
